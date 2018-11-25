@@ -6,6 +6,7 @@ unit RequiemWACCFPatcher;
 
 const
   requiemFile = 'Requiem.esp';
+  //requiemFile = 'Fozars_Dragonborn_-_Requiem_Patch.esp';
   waccfFile = 'Weapons Armor Clothing & Clutter Fixes.esp';
 
 var
@@ -279,6 +280,7 @@ begin
     if Signature(e) = 'CELL' then continue;
     if Signature(e) = 'CONT' then continue;
     if Signature(e) = 'ENCH' then continue;
+    if Signature(e) = 'SPEL' then continue;
 
     eR := RecordByFormID(requiem, FixedFormID(e), false);
     if not Assigned(eR) then continue;
